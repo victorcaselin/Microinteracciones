@@ -8,15 +8,15 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('imagenes/fondo.gif'); /* Ruta correcta para el GIF */
-            background-size: cover;  /* Asegura que el fondo cubra toda la pantalla */
-            background-position: center; /* Centra el fondo */
-            background-repeat: no-repeat; /* Evita que el fondo se repita */
-            background-attachment: fixed; /* Hace que el fondo permanezca fijo mientras se hace scroll */
+            background-image: url('imagenes/fondo.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
             text-align: center;
             animation: startup 2s ease-in-out;
-            min-height: 100vh; /* Asegura que el fondo cubra todo el alto de la página */
+            min-height: 100vh;
         }
         
         @keyframes startup {
@@ -69,7 +69,10 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: transform 0.2s;
+            transition: transform 0.2s, background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: red;
         }
         .button:active {
             transform: scale(0.9);
