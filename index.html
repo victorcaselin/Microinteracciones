@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Consolas</title>
+    <style>
+                
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/fondo.gif'); /* Ruta correcta para el GIF */
+            background-size: cover;  /* Asegura que el fondo cubra toda la pantalla */
+            background-position: center; /* Centra el fondo */
+            background-repeat: no-repeat; /* Evita que el fondo se repita */
+            background-attachment: fixed; /* Hace que el fondo permanezca fijo mientras se hace scroll */
+            color: white;
+            text-align: center;
+            animation: startup 2s ease-in-out;
+            min-height: 100vh; /* Asegura que el fondo cubra todo el alto de la página */
+        }
+        
+        @keyframes startup {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .header {
+            background: black;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+        .cart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .main-button {
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+        .main-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function playClickSound() {
+            let audio = new Audio('/sonido/click.mp3');  // Ruta relativa hacia la carpeta 'sonido'
+            audio.play();
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="header">
+        Tienda de Consolas
+        <a href="#" class="cart-button" onclick="playClickSound()">🛒 Carrito</a>
+    </div>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>¡Bienvenido a la tienda de videojuegos!</h1>
+        <a href="comprar.html" class="main-button" onclick="playClickSound()">Ver Consolas y Juegos</a>
+    </div>
+</body>
+</html>
